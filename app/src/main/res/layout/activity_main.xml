@@ -9,13 +9,16 @@
         <variable
             name="book"
             type="com.example.databindingdemo.Book" />
+
+        <variable
+            name="buttonHandler"
+            type="com.example.databindingdemo.MainActivity.MainActivityButtonsHandler" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".MainActivity">
-
 
         <TextView
             android:id="@+id/titleTextView"
@@ -43,5 +46,36 @@
             app:layout_constraintHorizontal_bias="0.501"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/titleTextView" />
+
+        <LinearLayout
+            android:layout_width="409dp"
+            android:layout_height="729dp"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="500dp"
+            android:layout_marginEnd="0dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <Button
+                android:id="@+id/cancelButton"
+                android:layout_margin="8dp"
+                android:layout_width="0dp"
+                android:onClick="@{buttonHandler::onCancelClicked}"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="cancel" />
+
+            <Button
+                android:id="@+id/okButton"
+                android:layout_margin="8dp"
+                android:layout_width="0dp"
+                android:onClick="@{buttonHandler::onOkClicked}"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="ok" />
+
+        </LinearLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
