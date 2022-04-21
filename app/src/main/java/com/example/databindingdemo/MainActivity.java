@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
@@ -12,7 +13,7 @@ import android.widget.Toast;
 import com.example.databindingdemo.databinding.ActivityMainBinding;
 
 public class MainActivity extends AppCompatActivity {
-//    private TextView titleTextView;
+    //    private TextView titleTextView;
 //    private TextView authorTextView;
     private ActivityMainBinding activityMainBinding;
     private MainActivityButtonsHandler mainActivityButtonsHandler;
@@ -43,7 +44,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-
     public class MainActivityButtonsHandler {
         Context context;
 
@@ -56,7 +56,7 @@ public class MainActivity extends AppCompatActivity {
         }
 
         public void onOkClicked(View view) {
-            Toast.makeText(context, "Ok", Toast.LENGTH_SHORT).show();
+            startActivity(new Intent(MainActivity.this, OkActivity.class));
         }
     }
 }

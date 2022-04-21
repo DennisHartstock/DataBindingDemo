@@ -10,6 +10,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.DataBindingDemo">
         <activity
+            android:name=".OkActivity"
+            android:exported="false"
+            android:label="@string/title_activity_ok"
+            android:theme="@style/Theme.DataBindingDemo.NoActionBar" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
