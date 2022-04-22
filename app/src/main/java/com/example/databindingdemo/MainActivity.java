@@ -52,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
         }
 
         public void onCancelClicked(View view) {
-            Toast.makeText(context, "Cancel", Toast.LENGTH_SHORT).show();
+            startActivity(new Intent(MainActivity.this, TwoWayBindingActivity.class));
         }
 
         public void onOkClicked(View view) {
